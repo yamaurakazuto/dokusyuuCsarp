@@ -1,0 +1,76 @@
+# 第4章 解答例
+
+### Ex01_IfElseIf
+```csharp
+string grade;
+if (score >= 90) grade = "A";
+else if (score >= 80) grade = "B";
+else if (score >= 70) grade = "C";
+else if (score >= 60) grade = "D";
+else grade = "F";
+Console.WriteLine($"{score}点 → {grade}");
+```
+
+### Ex02_SwitchExpression
+```csharp
+string name = day switch
+{
+    0 => "日曜日",
+    1 => "月曜日",
+    2 => "火曜日",
+    3 => "水曜日",
+    4 => "木曜日",
+    5 => "金曜日",
+    6 => "土曜日",
+    _ => "不明",
+};
+Console.WriteLine($"{day} は {name}");
+```
+
+### Ex03_ForSum
+```csharp
+int sum = 0;
+for (int i = 1; i <= n; i++) sum += i;
+Console.WriteLine($"1〜{n} の合計: {sum}");
+```
+
+### Ex04_ForeachMax
+```csharp
+int max = data[0];
+foreach (int v in data)
+    if (v > max) max = v;
+Console.WriteLine($"最大値: {max}");
+```
+
+### Ex05_PrimeCheck
+```csharp
+bool isPrime = n >= 2;
+for (int i = 2; i < n; i++)
+{
+    if (n % i == 0) { isPrime = false; break; }
+}
+Console.WriteLine($"{n} は素数: {isPrime}");
+```
+
+### Ex06_NestedLoop
+```csharp
+for (int i = 1; i <= 3; i++)
+{
+    for (int j = 1; j <= 3; j++)
+        Console.Write($"{i}x{j}={i * j} ");
+    Console.WriteLine();
+}
+```
+
+### Mini_FizzBuzz
+```csharp
+for (int i = 1; i <= 20; i++)
+{
+    if (i % 15 == 0) Console.Write("FizzBuzz ");
+    else if (i % 3 == 0) Console.Write("Fizz ");
+    else if (i % 5 == 0) Console.Write("Buzz ");
+    else Console.Write($"{i} ");
+}
+Console.WriteLine();
+```
+ポイント: 15(=3かつ5)の判定を**最初**に書く。順番を間違えると Fizz / Buzz に先に引っかかる。

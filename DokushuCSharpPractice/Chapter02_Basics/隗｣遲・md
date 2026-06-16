@@ -1,0 +1,74 @@
+# 第2章 解答例
+
+> まず自分で `Exercises.cs` を実装してから見ましょう。書き方は一例です。
+
+### Ex01_VariableAndConst
+```csharp
+const double PI = 3.14;
+int radius = 3;
+double area = PI * radius * radius;
+double circumference = 2 * PI * radius;
+Console.WriteLine($"半径{radius}の円 → 面積: {area} / 円周: {circumference}");
+```
+
+### Ex02_TypeInference
+```csharp
+var n = 100;
+var d = 3.14;
+var s = "Hello";
+var b = true;
+Console.WriteLine($"{n} は {n.GetType().Name}");
+Console.WriteLine($"{d} は {d.GetType().Name}");
+Console.WriteLine($"{s} は {s.GetType().Name}");
+Console.WriteLine($"{b} は {b.GetType().Name}");
+```
+ポイント: `var` は「型を書かなくていい」だけで、型は実際の値からコンパイル時に決まります（動的型ではない）。
+
+### Ex03_IntegerRange
+```csharp
+Console.WriteLine($"int 最大値: {int.MaxValue}");
+Console.WriteLine($"long 最大値: {long.MaxValue}");
+Console.WriteLine($"int最大値+1: {unchecked(int.MaxValue + 1)}");
+```
+ポイント: 上限を超えると最小値へ循環する（オーバーフロー）。`checked` を付けると例外になります。
+
+### Ex04_StringNumberConversion
+```csharp
+int x = int.Parse(a);
+int y = int.Parse(b);
+int sum = x + y;
+Console.WriteLine($"{x} + {y} = {sum}");
+Console.WriteLine("合計は" + sum.ToString() + "です");
+```
+
+### Ex05_ExplicitCast
+```csharp
+Console.WriteLine($"{value} を int にキャスト → {(int)value}");
+```
+ポイント: double→int は四捨五入ではなく「切り捨て」。
+
+### Ex06_Array
+```csharp
+int sum = 0;
+foreach (int n in numbers) sum += n;
+double avg = (double)sum / numbers.Length;
+Console.WriteLine($"合計: {sum} / 平均: {avg}");
+```
+
+### Ex07_NullCoalescing
+```csharp
+string displayName = name ?? "名無し";
+Console.WriteLine($"ようこそ、{displayName} さん");
+```
+
+### Mini_ProfileCard
+```csharp
+string name = "田中太郎";
+int age = 25;
+double height = 170.5;
+Console.WriteLine("==== 自己紹介 ====");
+Console.WriteLine($"名前 : {name}");
+Console.WriteLine($"年齢 : {age} 歳");
+Console.WriteLine($"身長 : {height} cm");
+Console.WriteLine($"来年は {age + 1} 歳になります。");
+```

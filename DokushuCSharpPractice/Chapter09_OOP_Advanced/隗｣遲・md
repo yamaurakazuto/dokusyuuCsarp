@@ -1,0 +1,78 @@
+# 第9章 解答例
+
+### Ex01_TryCatch
+```csharp
+try
+{
+    int n = int.Parse("abc");
+}
+catch (FormatException)
+{
+    Console.WriteLine("数値に変換できませんでした");
+}
+finally
+{
+    Console.WriteLine("処理終了");
+}
+```
+ポイント: `finally` は例外が起きても起きなくても**必ず**実行される。
+
+### ValidateAge（Ex02）
+```csharp
+public static void ValidateAge(int age)
+{
+    if (age < 0)
+        throw new InvalidAgeException("年齢が負の値です");
+}
+```
+
+### SignalAction（Ex03）
+```csharp
+public static string SignalAction(Signal signal) => signal switch
+{
+    Signal.Red => "止まれ",
+    Signal.Yellow => "注意",
+    Signal.Green => "進め",
+    _ => "不明",
+};
+```
+
+### Point（Ex04）
+```csharp
+public double DistanceFromOrigin() => Math.Sqrt(X * X + Y * Y);
+```
+ポイント: struct は値型。代入やメソッド引数で**コピー**される（クラスは参照のコピー）。
+
+### Ex05_Record
+```csharp
+var discounted = a with { Price = 80 };
+Console.WriteLine($"値引き後: {discounted}");
+```
+ポイント: record は中身が同じなら `==` が true（値の等価性）。`with` は一部だけ変えた複製を作る。
+
+### Max（Ex06）
+```csharp
+public static T Max<T>(T a, T b) where T : IComparable<T>
+    => a.CompareTo(b) > 0 ? a : b;
+```
+ポイント: `where T : IComparable<T>` で「比較できる型」に限定するから CompareTo が呼べる。
+
+### Vector2 +（Ex07）
+```csharp
+public static Vector2 operator +(Vector2 a, Vector2 b)
+    => new Vector2(a.X + b.X, a.Y + b.Y);
+```
+
+### Calculate（Mini）
+```csharp
+public static double Calculate(double a, double b, Operation op) => op switch
+{
+    Operation.Add => a + b,
+    Operation.Subtract => a - b,
+    Operation.Multiply => a * b,
+    Operation.Divide => b == 0
+        ? throw new DivideByZeroException()
+        : a / b,
+    _ => throw new ArgumentException("未対応の演算"),
+};
+```

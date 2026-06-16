@@ -1,0 +1,55 @@
+# 第11章 解答例
+
+### Ex01_AsyncAwait
+```csharp
+public static async Task Ex01_AsyncAwait()
+{
+    Console.WriteLine("計算中...");
+    await Task.Delay(100);
+    int sum = 0;
+    for (int i = 1; i <= 100; i++) sum += i;
+    Console.WriteLine($"合計: {sum}");
+}
+```
+ポイント: `await` で「待っている間ほかの処理に譲る」。`async` メソッドの戻り値は `Task` / `Task<T>`。
+
+### Ex02_WhenAll
+```csharp
+int[] results = await Task.WhenAll(DoubleAsync(1), DoubleAsync(2), DoubleAsync(3));
+Console.WriteLine($"結果: {string.Join(" ", results)}");
+```
+ポイント: `WhenAll` は複数タスクを**同時**に走らせて全完了を待つ（直列より速い）。
+
+### Ex03_Attribute
+```csharp
+var attr = typeof(SampleData).GetCustomAttribute<AuthorAttribute>();
+Console.WriteLine($"作者: {attr!.Name}");
+```
+（ファイル冒頭の `using System.Reflection;` が必要。本ファイルでは追加済み）
+ポイント: 属性はクラス等に「メタ情報」を付ける仕組み。実行時にリフレクションで読み取れる。
+
+### Ex04_Dynamic
+```csharp
+dynamic x = "hello";
+Console.WriteLine($"文字列の長さ: {x.Length}");
+x = 42;
+Console.WriteLine($"数値の2倍: {x * 2}");
+```
+ポイント: `dynamic` は型チェックを実行時まで遅らせる。便利だが誤りもコンパイル時に検出されない。
+
+### Ex05_Event（Button.OnClick）
+```csharp
+public void OnClick()
+{
+    Clicked?.Invoke();
+}
+```
+ポイント: `?.Invoke()` は購読者が1人もいない（null）ときに呼ばないための安全な書き方。
+`button.Clicked += ...;` で購読を追加し、複数登録すると登録順に全部呼ばれる。
+
+### Mini_AsyncDownload
+```csharp
+var tasks = files.Select(f => DownloadAsync(f));
+await Task.WhenAll(tasks);
+Console.WriteLine("すべてのダウンロードが完了しました");
+```

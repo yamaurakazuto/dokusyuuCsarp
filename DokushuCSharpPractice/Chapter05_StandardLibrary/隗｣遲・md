@@ -1,0 +1,61 @@
+# 第5章 解答例
+
+### Ex01_StringBasics
+```csharp
+Console.WriteLine($"Trim: '{s.Trim()}'");
+Console.WriteLine($"Upper: {s.ToUpper()}");
+Console.WriteLine($"C#を含む: {s.Contains("C#")}");
+```
+
+### Ex02_SplitAndFormat
+```csharp
+string[] parts = csv.Split(',');
+Console.WriteLine($"要素数: {parts.Length}");
+for (int i = 0; i < parts.Length; i++)
+    Console.WriteLine($"{i + 1}: {parts[i]}");
+```
+
+### Ex03_Regex
+```csharp
+string pattern = @"^[\w.]+@[\w.]+\.\w+$";
+Console.WriteLine($"{ok} → {Regex.IsMatch(ok, pattern)}");
+Console.WriteLine($"{ng} → {Regex.IsMatch(ng, pattern)}");
+```
+（ファイル冒頭に `using System.Text.RegularExpressions;` が必要。本ファイルでは既に追加済み）
+
+### Ex04_DateTime
+```csharp
+var start = new DateTime(2025, 1, 1);
+var end = new DateTime(2025, 12, 31);
+TimeSpan diff = end - start;
+Console.WriteLine($"日数の差: {diff.Days} 日");
+```
+
+### Ex05_Math
+```csharp
+double dist = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+Console.WriteLine($"距離: {dist}");
+```
+
+### Ex06_Random
+```csharp
+var rnd = new Random();
+Console.Write("サイコロ: ");
+for (int i = 0; i < 5; i++)
+    Console.Write($"{rnd.Next(1, 7)} ");
+Console.WriteLine();
+```
+ポイント: `Next(1, 7)` の上限 7 は**含まれない**（1〜6 になる）。
+
+### Mini_PasswordChecker
+```csharp
+bool longEnough = password.Length >= 8;
+bool hasUpper = Regex.IsMatch(password, "[A-Z]");
+bool hasDigit = Regex.IsMatch(password, "[0-9]");
+Console.WriteLine($"8文字以上: {longEnough}");
+Console.WriteLine($"大文字あり: {hasUpper}");
+Console.WriteLine($"数字あり: {hasDigit}");
+Console.WriteLine(longEnough && hasUpper && hasDigit
+    ? "→ 強いパスワードです"
+    : "→ 弱いパスワードです");
+```

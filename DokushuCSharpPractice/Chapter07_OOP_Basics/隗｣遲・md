@@ -1,0 +1,92 @@
+# 第7章 解答例
+
+### Rectangle（Ex01）
+```csharp
+public int Area()
+{
+    return Width * Height;
+}
+```
+
+### Person（Ex02）
+```csharp
+public Person(string name)
+{
+    Name = name;
+    Age = -1;
+}
+
+public Person(string name, int age)
+{
+    Name = name;
+    Age = age;
+}
+```
+別解: `public Person(string name) : this(name, -1) { }` のようにコンストラクター呼び出しを連鎖させてもよい。
+
+### Counter（Ex03）
+```csharp
+private static int _count;
+
+public static int Count => _count;
+
+public Counter()
+{
+    _count++;
+}
+
+public static void Reset()
+{
+    _count = 0;
+}
+```
+ポイント: `static` フィールドはインスタンスごとではなく**クラス全体で1つ**共有される。
+
+### Greet / Swap / TryHalf / MinMax（Ex04〜06）
+```csharp
+public static string Greet(string name, string greeting = "こんにちは")
+    => $"{greeting}、{name}さん";
+
+public static void Swap(ref int a, ref int b)
+{
+    int tmp = a;
+    a = b;
+    b = tmp;
+}
+
+public static bool TryHalf(int value, out int half)
+{
+    if (value % 2 == 0) { half = value / 2; return true; }
+    half = 0;
+    return false;
+}
+
+public static (int min, int max) MinMax(int[] data)
+{
+    int min = data[0], max = data[0];
+    foreach (int v in data)
+    {
+        if (v < min) min = v;
+        if (v > max) max = v;
+    }
+    return (min, max);
+}
+```
+
+### BankAccount（Mini）
+```csharp
+private int _balance;
+
+public int Balance => _balance;
+
+public void Deposit(int amount)
+{
+    _balance += amount;
+}
+
+public void Withdraw(int amount)
+{
+    if (amount <= _balance) _balance -= amount;
+    else Console.WriteLine("残高不足");
+}
+```

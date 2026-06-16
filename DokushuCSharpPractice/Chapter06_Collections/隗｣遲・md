@@ -1,0 +1,64 @@
+# 第6章 解答例
+
+### Ex01_List
+```csharp
+var list = new List<string> { "りんご", "みかん", "ぶどう" };
+list.Remove("みかん");
+Console.WriteLine($"要素数: {list.Count}");
+Console.WriteLine(string.Join(", ", list));
+```
+
+### Ex02_Stack
+```csharp
+var stack = new Stack<int>();
+stack.Push(1); stack.Push(2); stack.Push(3);
+Console.Write("取り出し順: ");
+while (stack.Count > 0) Console.Write($"{stack.Pop()} ");
+Console.WriteLine();
+```
+
+### Ex03_Queue
+```csharp
+var queue = new Queue<string>();
+queue.Enqueue("A"); queue.Enqueue("B"); queue.Enqueue("C");
+Console.Write("取り出し順: ");
+while (queue.Count > 0) Console.Write($"{queue.Dequeue()} ");
+Console.WriteLine();
+```
+
+### Ex04_HashSet
+```csharp
+var set = new HashSet<int>(data);
+Console.WriteLine($"ユニーク数: {set.Count}");
+Console.WriteLine(string.Join(", ", set));
+```
+
+### Ex05_Dictionary
+```csharp
+var counts = new Dictionary<string, int>();
+foreach (string word in text.Split(' '))
+{
+    if (counts.ContainsKey(word)) counts[word]++;
+    else counts[word] = 1;
+}
+foreach (var kvp in counts)
+    Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+```
+
+### Ex06_SortedDictionary
+```csharp
+var dict = new SortedDictionary<int, string>();
+dict[3] = "three"; dict[1] = "one"; dict[2] = "two";
+foreach (var kvp in dict)
+    Console.WriteLine($"{kvp.Key} => {kvp.Value}");
+```
+
+### Mini_Inventory
+```csharp
+var stock = new Dictionary<string, int> { ["りんご"] = 10, ["みかん"] = 5 };
+stock["りんご"] -= 3;                       // 出荷
+if (stock.ContainsKey("バナナ")) stock["バナナ"] += 8;
+else stock["バナナ"] = 8;                    // 入荷（新規）
+foreach (var kvp in stock)
+    Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+```

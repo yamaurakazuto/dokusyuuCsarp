@@ -1,0 +1,51 @@
+# 第3章 解答例
+
+### Ex01_Division
+```csharp
+Console.WriteLine($"7 / 2 (整数) = {7 / 2}");
+Console.WriteLine($"7 / 2 (小数) = {7.0 / 2}");
+Console.WriteLine($"7 % 2 = {7 % 2}");
+```
+ポイント: 整数同士の `/` は小数を切り捨てる。片方を小数にすると小数の割り算になる。
+
+### Ex02_IncrementDecrement
+```csharp
+int b = a++;            // 先に代入してから a を増やす
+Console.WriteLine($"後置: b = {b}, その後 a = {a}");
+int c = ++a;            // 先に a を増やしてから代入
+Console.WriteLine($"前置: c = {c}, その後 a = {a}");
+```
+
+### Ex03_Ternary
+```csharp
+string kind = n % 2 == 0 ? "偶数" : "奇数";
+Console.WriteLine($"{n} は {kind}");
+```
+
+### Ex04_NullCoalescing
+```csharp
+Console.WriteLine($"今回の点数: {score ?? 0}");
+```
+
+### Ex05_LogicalOperator
+```csharp
+string label = (age >= 18 && age < 65) ? "現役世代" : "対象外";
+Console.WriteLine($"{age}歳 → {label}");
+```
+ポイント: `&&` は左が false なら右を評価しない（短絡評価）。
+
+### Ex06_BitOperator
+```csharp
+int perm = Read | Execute;            // 1 | 4 = 5
+Console.WriteLine($"合成フラグの値: {perm}");
+Console.WriteLine($"Write を持つ？: {(perm & Write) != 0}");
+Console.WriteLine($"Read を持つ？: {(perm & Read) != 0}");
+```
+
+### Mini_BmiCalculator
+```csharp
+double bmi = weightKg / (heightM * heightM);
+double rounded = Math.Round(bmi, 1);
+string judge = bmi < 18.5 ? "低体重" : bmi < 25 ? "標準" : "肥満";
+Console.WriteLine($"BMI: {rounded} → {judge}");
+```

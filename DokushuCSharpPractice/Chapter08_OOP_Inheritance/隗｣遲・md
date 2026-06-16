@@ -1,0 +1,59 @@
+# 第8章 解答例
+
+### Score（Ex01）
+```csharp
+public int Value
+{
+    get => _value;
+    set
+    {
+        if (value < 0) _value = 0;
+        else if (value > 100) _value = 100;
+        else _value = value;
+    }
+}
+```
+別解（Math.Clamp）: `_value = Math.Clamp(value, 0, 100);`
+ポイント: フィールドは private にして、プロパティの set で値を検証する＝カプセル化。
+
+### Week（Ex02）
+```csharp
+public string this[int index]
+{
+    get => _days[index];
+}
+```
+
+### Dog / Cat（Ex03）
+```csharp
+public class Dog : Animal
+{
+    public override string Speak() => "ワン";
+}
+
+public class Cat : Animal
+{
+    public override string Speak() => "ニャー";
+}
+```
+ポイント: 基底が `virtual`、派生が `override`。Animal 型の変数でも実体の Speak が呼ばれる。
+
+### Circle / RectShape（Ex04・Mini）
+```csharp
+public override double Area() => Math.PI * Radius * Radius;   // Circle
+public override double Area() => Width * Height;              // RectShape
+```
+
+### Member / Guest（Ex05）
+```csharp
+public decimal ApplyDiscount(decimal price) => price * 0.8m;  // Member
+public decimal ApplyDiscount(decimal price) => price;         // Guest
+```
+
+### Mini_ShapeTotal
+```csharp
+double total = 0;
+foreach (Shape s in shapes)
+    total += s.Area();   // 実体に応じた Area() が呼ばれる
+Console.WriteLine($"合計面積: {total}");
+```

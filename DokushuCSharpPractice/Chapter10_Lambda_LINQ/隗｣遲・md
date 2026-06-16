@@ -1,0 +1,55 @@
+# 第10章 解答例
+
+### Ex01_Delegate
+```csharp
+Func<int, int, int> add = (a, b) => a + b;
+Action<string> shout = s => Console.WriteLine(s.ToUpper());
+Console.WriteLine($"add(3, 4) = {add(3, 4)}");
+shout("hello");
+```
+ポイント: `Func` は戻り値あり、`Action` は戻り値なし。ラムダ `(引数) => 処理`。
+
+### Ex02_Lambda
+```csharp
+words.FindAll(w => w.Length >= 4).ForEach(w => Console.WriteLine(w));
+```
+
+### Ex03_Where
+```csharp
+var evens = numbers.Where(n => n % 2 == 0);
+Console.WriteLine(string.Join(" ", evens));
+```
+
+### Ex04_OrderBySelect
+```csharp
+var result = names
+    .OrderBy(n => n.Length)
+    .Select(n => $"{n}({n.Length})");
+foreach (var item in result)
+    Console.WriteLine(item);
+```
+
+### Ex05_GroupBy
+```csharp
+var groups = items.GroupBy(x => x.Item2);
+foreach (var g in groups)
+    Console.WriteLine($"{g.Key}: {g.Count()}件");
+```
+
+### Ex06_Aggregate
+```csharp
+Console.WriteLine($"合計: {scores.Sum()} / 平均: {scores.Average()} / 最高: {scores.Max()} / 件数: {scores.Count()}");
+```
+
+### Mini_StudentAnalysis
+```csharp
+var passed = students.Where(s => s.Score >= 60).Select(s => s.Name);
+Console.WriteLine($"合格者: {string.Join(", ", passed)}");
+
+double avg = students.Average(s => s.Score);
+Console.WriteLine($"平均点: {avg}");
+
+string top = students.OrderByDescending(s => s.Score).First().Name;
+Console.WriteLine($"最高得点者: {top}");
+```
+別解（.NET 6 以降）: `students.MaxBy(s => s.Score)!.Name` でも最高得点者を取れる。
