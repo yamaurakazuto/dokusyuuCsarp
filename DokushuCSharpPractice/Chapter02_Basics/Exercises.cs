@@ -20,7 +20,12 @@ public static class Exercises
     public static void Ex01_VariableAndConst()
     {
         // TODO: const で円周率を宣言し、面積(PI*r*r)と円周(2*PI*r)を計算して表示
-        throw new NotImplementedException();
+        const double Pi = 3.14;
+        int radius = 3;
+
+        double area = Pi * radius * radius;
+        double circumference = 2 * Pi * radius;
+        Console.WriteLine($"半径3の円{area}/ {circumference}");
     }
 
     /// <summary>
@@ -36,7 +41,15 @@ public static class Exercises
     public static void Ex02_TypeInference()
     {
         // TODO: var n = 100; のように4種類宣言し、$"{n} は {n.GetType().Name}" を表示
-        throw new NotImplementedException();
+        var n = 100;
+        var a = 2;
+        var b = 39;
+        var m = 4;
+
+        Console.WriteLine($"{n}は{n.GetType().Name}");
+        Console.WriteLine($"{a}は{a.GetType().Name}");
+        Console.WriteLine($"{b}は{b.GetType().Name}");
+        Console.WriteLine($"{m}は{m.GetType().Name}");
     }
 
     /// <summary>
@@ -51,7 +64,13 @@ public static class Exercises
     public static void Ex03_IntegerRange()
     {
         // TODO: int.MaxValue, long.MaxValue, そして unchecked(int.MaxValue + 1) を表示
-        throw new NotImplementedException();
+        int a = int.MaxValue;
+        long b = long.MaxValue;
+        int c = a + 1;
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        Console.WriteLine(c);
+
     }
 
     /// <summary>
@@ -67,7 +86,8 @@ public static class Exercises
         string a = "42";
         string b = "8";
         // TODO: int.Parse で数値化 → 加算 → 結果を表示、合計を ToString して文章に埋め込む
-        throw new NotImplementedException();
+
+        
     }
 
     /// <summary>

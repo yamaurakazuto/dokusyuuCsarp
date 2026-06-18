@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xyst5\\Downloads\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\Chapter11_Advanced.csproj": {}
+    "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\Chapter11_Advanced.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xyst5\\Downloads\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\Chapter11_Advanced.csproj": {
+    "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\Chapter11_Advanced.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xyst5\\Downloads\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\Chapter11_Advanced.csproj",
+        "projectUniqueName": "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\Chapter11_Advanced.csproj",
         "projectName": "Chapter11_Advanced",
-        "projectPath": "C:\\Users\\xyst5\\Downloads\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\Chapter11_Advanced.csproj",
+        "projectPath": "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\Chapter11_Advanced.csproj",
         "packagesPath": "C:\\Users\\xyst5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xyst5\\Downloads\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\obj\\",
+        "outputPath": "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter11_Advanced\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
