@@ -86,7 +86,10 @@ public static class Exercises
         string a = "42";
         string b = "8";
         // TODO: int.Parse で数値化 → 加算 → 結果を表示、合計を ToString して文章に埋め込む
-
+        int n = int.Parse(a);
+        int c = int.Parse(b);
+        int sum = n + c;
+        Console.WriteLine($"合計は{sum}です");
         
     }
 
