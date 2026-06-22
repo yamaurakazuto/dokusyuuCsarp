@@ -117,9 +117,21 @@ public static class Exercises
     /// </summary>
     public static void Ex06_Array()
     {
+        var sum = 0;
+        
         int[] numbers = { 10, 20, 30, 40, 50 };
         // TODO: 合計を求め、平均(合計/要素数)を表示
+        foreach(var num in numbers )
+        {
+           
+            sum += num;
+        }
+
+        var average = sum / numbers.Length;
         
+        Console.WriteLine($"合計:{sum}");
+        Console.WriteLine($"平均:{average}");
+
     }
 
     /// <summary>
