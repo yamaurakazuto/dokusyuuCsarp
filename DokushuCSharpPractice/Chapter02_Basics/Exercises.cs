@@ -103,8 +103,10 @@ public static class Exercises
     {
         double value = 3.99;
         // TODO: (int)value を表示
-        throw new NotImplementedException();
-    }
+        Console.WriteLine($"{(int)value}");
+
+
+    }                                               
 
     /// <summary>
     /// 【2.5.4 配列型】
@@ -117,7 +119,7 @@ public static class Exercises
     {
         int[] numbers = { 10, 20, 30, 40, 50 };
         // TODO: 合計を求め、平均(合計/要素数)を表示
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
