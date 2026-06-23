@@ -145,7 +145,7 @@ public static class Exercises
     {
         string? name = null;
         // TODO: name ?? "名無し" を使って表示
-        throw new NotImplementedException();
+        Console.WriteLine($"ようこそ{name ?? "名無し"}さん");
     }
 
     /// <summary>
@@ -162,6 +162,16 @@ public static class Exercises
     public static void Mini_ProfileCard()
     {
         // TODO: 変数を用意し、$"..." の文字列補間で整形して表示
-        throw new NotImplementedException();
+
+        string name = "田中太郎";
+        int age = 25;
+        double height = 170.5;
+        int nextage = age + 1;
+
+        Console.WriteLine($"名前：{name}");
+        Console.WriteLine($"年齢：{age}");
+        Console.WriteLine($"身長：{height}");
+        Console.WriteLine($"来年は{nextage}歳になります");
+
     }
 }
