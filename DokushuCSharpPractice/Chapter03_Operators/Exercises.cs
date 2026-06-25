@@ -18,7 +18,12 @@ public static class Exercises
     public static void Ex01_Division()
     {
         // TODO: 整数同士の除算、7.0/2 などの小数除算、剰余 % を表示
-        throw new NotImplementedException();
+        int n1 = 7;
+        int n2 = 2;
+
+        Console.WriteLine(n1 / n2);
+        Console.WriteLine((double)n1 / n2);
+        Console.WriteLine(n1 % n2);
     }
 
     /// <summary>
@@ -32,7 +37,12 @@ public static class Exercises
     {
         int a = 5;
         // TODO: int b = a++;（後置）→ b と a を表示。続けて int c = ++a;（前置）→ c と a を表示
-        throw new NotImplementedException();
+        int b = a++;
+        Console.WriteLine(b + " " + a);
+
+        int c = ++a;
+        
+        Console.WriteLine(c + " " + a);
     }
 
     /// <summary>
@@ -45,7 +55,7 @@ public static class Exercises
     {
         int n = 8;
         // TODO: n % 2 == 0 ? "偶数" : "奇数" を使って表示
-        throw new NotImplementedException();
+        Console.WriteLine(n % 2 == 0 ? "偶数" :"奇数");
     }
 
     /// <summary>
@@ -58,7 +68,7 @@ public static class Exercises
     {
         int? score = null;
         // TODO: score ?? 0 を表示
-        throw new NotImplementedException();
+        Console.WriteLine($"今回の点数: {score ?? 0}");
     }
 
     /// <summary>
