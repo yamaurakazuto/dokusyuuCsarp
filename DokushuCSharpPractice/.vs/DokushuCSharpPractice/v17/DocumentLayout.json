@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{9774ABAB-7001-4C8F-8FFF-018BADD8CC28}|Chapter03_Operators\\Chapter03_Operators.csproj|c:\\users\\xyst5\\dokushucsharppractice\\dokushucsharppractice\\chapter03_operators\\exercises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9774ABAB-7001-4C8F-8FFF-018BADD8CC28}|Chapter03_Operators\\Chapter03_Operators.csproj|solutionrelative:chapter03_operators\\exercises.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9774ABAB-7001-4C8F-8FFF-018BADD8CC28}|Chapter03_Operators\\Chapter03_Operators.csproj|c:\\users\\xyst5\\dokushucsharppractice\\dokushucsharppractice\\chapter03_operators\\\u9697\uFF63\u9072\u30FBmd||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9774ABAB-7001-4C8F-8FFF-018BADD8CC28}|Chapter03_Operators\\Chapter03_Operators.csproj|solutionrelative:chapter03_operators\\\u9697\uFF63\u9072\u30FBmd||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "\u9697\uFF63\u9072\u30FBmd",
+              "DocumentMoniker": "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter03_Operators\\\u9697\uFF63\u9072\u30FBmd",
+              "RelativeDocumentMoniker": "Chapter03_Operators\\\u9697\uFF63\u9072\u30FBmd",
+              "ToolTip": "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter03_Operators\\\u9697\uFF63\u9072\u30FBmd",
+              "RelativeToolTip": "Chapter03_Operators\\\u9697\uFF63\u9072\u30FBmd",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-27T14:42:24.879Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Exercises.cs",
               "DocumentMoniker": "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter03_Operators\\Exercises.cs",
               "RelativeDocumentMoniker": "Chapter03_Operators\\Exercises.cs",
-              "ToolTip": "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter03_Operators\\Exercises.cs*",
-              "RelativeToolTip": "Chapter03_Operators\\Exercises.cs*",
-              "ViewState": "AgIAADIAAAAAAAAAAAAjwEYAAAAvAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\xyst5\\DokushuCSharpPractice\\DokushuCSharpPractice\\Chapter03_Operators\\Exercises.cs",
+              "RelativeToolTip": "Chapter03_Operators\\Exercises.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAwGsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-25T15:04:54.085Z",
               "EditorCaption": ""
