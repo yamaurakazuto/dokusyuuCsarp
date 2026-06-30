@@ -105,7 +105,10 @@ public static class Exercises
     {
         const int Read = 1, Write = 2, Execute = 4;
         // TODO: int perm = Read | Execute; 値を表示。 (perm & Write) != 0 などで判定
-        
+        int perm = Read | Execute;
+        Console.WriteLine($"合成フラグの値: {perm}");
+        Console.WriteLine($"Write を持つ？: {(perm & Write) != 0}");
+        Console.WriteLine($"Read を持つ？: {(perm & Read) != 0}");
     }
 
     /// <summary>
@@ -121,6 +124,11 @@ public static class Exercises
         double heightM = 1.70;
         double weightKg = 65;
         // TODO: BMI を計算し Math.Round で丸め、ネストした三項演算子で区分を判定して表示
+        double BMI = weightKg / (heightM * heightM);
+        double rouded = Math.Round(BMI, 1);
+        string dujge = BMI < 18.5 ? "低体重" : BMI < 25 ? "標準" : "肥満";
+        Console.WriteLine($"BMI: {rouded} → {dujge}");
+      
         
     }
 }
