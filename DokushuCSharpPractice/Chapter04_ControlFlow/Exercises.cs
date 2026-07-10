@@ -16,7 +16,18 @@ public static class Exercises
     {
         int score = 85;
         // TODO: if / else if で成績を求めて表示
-        throw new NotImplementedException();
+        string getResult;
+
+        if (score >= 90) getResult = "A";
+        else if (score >= 80) getResult = "B";
+        else if (score >= 70) getResult = "C";
+        else if (score >= 60) getResult = "D";
+        else getResult = "F";
+
+        Console.WriteLine($"{getResult}");
+
+
+
     }
 
     /// <summary>
@@ -30,7 +41,18 @@ public static class Exercises
     {
         int day = 3;
         // TODO: var name = day switch { 0 => "日曜日", ... , _ => "不明" }; を使う
-        throw new NotImplementedException();
+        var name = day switch
+        {
+            0 => "日曜日",
+            1 => "月曜日",
+            2 => "火曜日",
+            3 => "水曜日",
+            4 => "木曜日",
+            5 => "金曜日",
+            6 => "土曜日",
+            _ => "不明"
+        };
+        Console.WriteLine($"{day}は{name}");
     }
 
     /// <summary>
@@ -43,7 +65,7 @@ public static class Exercises
     {
         int n = 10;
         // TODO: for ループで合計
-        throw new NotImplementedException();
+       
     }
 
     /// <summary>
@@ -56,7 +78,7 @@ public static class Exercises
     {
         int[] data = { 12, 7, 42, 3, 28 };
         // TODO: foreach で最大値を探す
-        throw new NotImplementedException();
+        
     }
 
     /// <summary>
@@ -70,7 +92,7 @@ public static class Exercises
     {
         int n = 29;
         // TODO: ループで割り切れるか調べ、bool で判定して表示
-        throw new NotImplementedException();
+       
     }
 
     /// <summary>
@@ -85,7 +107,7 @@ public static class Exercises
     public static void Ex06_NestedLoop()
     {
         // TODO: for を二重にして九九を表示（1〜3）
-        throw new NotImplementedException();
+       
     }
 
     /// <summary>
@@ -98,6 +120,6 @@ public static class Exercises
     public static void Mini_FizzBuzz()
     {
         // TODO: for + if/else if で判定。15の倍数の判定を最初に行うのがコツ
-        throw new NotImplementedException();
+        
     }
 }

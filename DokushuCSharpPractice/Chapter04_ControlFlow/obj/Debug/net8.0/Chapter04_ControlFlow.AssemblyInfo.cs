@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chapter04_ControlFlow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06d18fcbda57c370405fe70c5be64d7559e995fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9317d59cccb2ea532124ac2a379b15ed6ae78104")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chapter04_ControlFlow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chapter04_ControlFlow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
