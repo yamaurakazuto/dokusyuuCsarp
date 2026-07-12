@@ -41,7 +41,7 @@ public static class Exercises
     {
         int day = 3;
         // TODO: var name = day switch { 0 => "日曜日", ... , _ => "不明" }; を使う
-        var name = day switch
+        string grade = day switch
         {
             0 => "日曜日",
             1 => "月曜日",
@@ -50,10 +50,11 @@ public static class Exercises
             4 => "木曜日",
             5 => "金曜日",
             6 => "土曜日",
-            _ => "不明"
+            _ => "不明",
         };
-        Console.WriteLine($"{day}は{name}");
+        Console.WriteLine($"{day}は{grade}");
     }
+       
 
     /// <summary>
     /// 【4.2.3 for命令】
@@ -64,8 +65,15 @@ public static class Exercises
     public static void Ex03_ForSum()
     {
         int n = 10;
+        int sum = 0;
         // TODO: for ループで合計
-       
+        for (var i = 0; i <= n; i++)
+        {
+            sum += i;
+            
+        }
+
+        Console.WriteLine(sum);
     }
 
     /// <summary>
